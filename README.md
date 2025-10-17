@@ -2,17 +2,21 @@
 
 Uma aplicação web moderna para explorar filmes, construída com React, TypeScript e Vite. Permite buscar filmes, ver detalhes e favoritar.
 
+## 🌐 Acesso Online
+
+🚀 **Aplicação em produção:** [https://moviedb.eriquisanti.com](https://moviedb.eriquisanti.com)
+
 ## 🚀 Tecnologias Utilizadas
 
 - **React 19** - Biblioteca para interfaces de usuário
 - **TypeScript** - Linguagem tipada baseada em JavaScript
-- **Vite** - Framework React
+- **Vite** - Build tool e dev server ultra-rápido
 - **React Router 7** - Roteamento para SPA
 - **Tailwind CSS 4** - Framework CSS utilitário
 - **Lucide React** - Biblioteca de ícones
 - **Jest** - Framework de testes
 - **React Testing Library** - Utilitários para testar componentes React
-- **Fech API** - Para requisições HTTP
+- **Fetch API** - Para requisições HTTP
 
 ## 📋 Pré-requisitos
 
@@ -48,7 +52,7 @@ VITE_TMDB_API_URL=https://api.themoviedb.org/3
 VITE_TMDB_IMAGE_URL=https://image.tmdb.org/t/p/w300
 ```
 
-ou copie o contúdo do arquivo `.env.example`
+ou copie o conteúdo do arquivo `.env.example`
 
 **Para obter o token da TMDB:**
 
@@ -153,6 +157,19 @@ npm run test:watch
 - **🔍 Busca** - Pesquisa de filmes por título
 - **📱 Paginação Infinita** - Carregamento automático de mais filmes
 - **❤️ Favoritos** - Sistema para favoritar/desfavoritar filmes
-- **🎭 Detalhes do Filme** - Página com informações basicas do filme
+- **🎭 Detalhes do Filme** - Página com informações básicas do filme
 - **📱 Design Responsivo** - Funciona em desktop, tablet e mobile
 - **🌐 Navegação** - Roteamento com React Router
+
+## 🚀 Deploy
+
+### Aplicação em Produção
+
+A aplicação está disponível online em: **[https://moviedb.eriquisanti.com](https://moviedb.eriquisanti.com)**
+
+### Build Local
+
+```bash
+npm run build        # Gera build de produção
+npm run preview      # Visualiza o build de produção localmente
+```
