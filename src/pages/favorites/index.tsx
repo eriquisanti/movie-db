@@ -8,6 +8,7 @@ import { useFavorites } from "@/providers";
 import type { Movie } from "@/types/movie-list";
 import { FavoritesNotFound } from "./components/favorites-not-found";
 import { Filter } from "./components/filter";
+import { ENV_CONFIG } from "@/config/app-config";
 
 export function FavoritesPage() {
   const { sortedFavorites, removeFavorite } = useFavorites()
@@ -38,7 +39,7 @@ export function FavoritesPage() {
             sortedFavorites.map((movie: Movie, index: number) => {
               return (
                 <Card cardId={movie.id} key={movie.id + "_" + index}>
-                  <CardImage src={import.meta.env.VITE_TMDB_IMAGE_URL + "/" + movie.poster_path} />
+                  <CardImage src={ENV_CONFIG.TMDB_IMAGE_URL + "/" + movie.poster_path} />
                   <CardAction
                     icon={<Icon name="trash-2" />}
                     onClick={() => handleRemoveFavorite(movie.id)}
