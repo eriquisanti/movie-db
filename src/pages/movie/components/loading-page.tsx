@@ -3,9 +3,9 @@ import { Container } from "@/components/container";
 export function LoadingPage() {
   return (
     <Container>
-      <div className="md:flex md:gap-4">
-        <section className="w-2/4 h-[600px] overflow-hidden rounded-2xl">
-          <div className="w-full h-full bg-gray-800 animate-pulse"></div>
+      <div className="flex flex-col gap-10 md:flex-row md:gap-4">
+        <section className="flex justify-center w-full h-[600px] overflow-hidden md:w-2/4 md:justify-end">
+          <div className="w-full max-w-[400px] h-full bg-gray-800 animate-pulse rounded-2xl"></div>
         </section>
         <section className="flex-1">
 
