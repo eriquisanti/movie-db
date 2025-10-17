@@ -1,0 +1,1 @@
+export type SortOption = 'title-a-z' | 'title-z-a' | 'rating';
