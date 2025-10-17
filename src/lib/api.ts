@@ -1,6 +1,6 @@
 import { ENV_CONFIG } from "@/config/app-config"
 
-const BASE_URL = "/api"
+const BASE_URL = import.meta.env.DEV ? "/api" : ENV_CONFIG.TMDB_API_URL
 const API_KEY = ENV_CONFIG.TMDB_API_TOKEN
 
 export interface RequestOptions extends RequestInit {
