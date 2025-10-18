@@ -13,7 +13,7 @@ export function Filter() {
     <div className="flex flex-col items-center md:items-start">
       <div className="mb-4">
         <h2 className="text-white text-2xl font-bold">
-          Meus filmes Favoritos
+          Meus Filmes Favoritos
         </h2>
       </div>
       <div className="flex gap-1 items-center">
