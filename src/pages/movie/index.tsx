@@ -55,32 +55,31 @@ export function MoviePage() {
         <section className="w-full flex flex-col items-center mb-10 overflow-hidden md:mb-0 md:w-1/2 md:items-end">
           <Banner src={data.backdrop_path} />
         </section>
-        <section className="flex-1 h-[600px] flex flex-col">
-          <div className="md:flex-1">
-            <h2 className="text-3xl font-bold mb-4 text-white">{data?.title}</h2>
-            <div className="flex gap-2 mb-10">
-              {
-                data?.genres.map((genre) => (
-                  <Flag className="bg-blue-500 text-white" key={genre.id}>{genre.name}</Flag>
-                ))
-              }
-            </div>
-            <div className="mb-10">
-              <p className="text-gray-400 mb-2">Data de lançamento: <span>{formatDate(data?.release_date || "")}</span></p>
-              <p className="flex gap-1 text-gray-400">Nota TMDB: <Flag>
-                {data?.vote_average}
-              </Flag></p>
-            </div>
+        <section className="flex-1 h-[600px]">
+          <h2 className="text-3xl font-bold mb-4 text-white">{data?.title}</h2>
+          <div className="flex gap-2 mb-10">
             {
-              data?.overview && (
-                <div className="mb-10 md:mb-auto">
-                  <p className="text-gray-300 text-md">Sinopse</p>
-                  <p className="text-gray-400">{data?.overview}</p>
-                </div>
-              )
+              data?.genres.map((genre) => (
+                <Flag className="bg-blue-500 text-white" key={genre.id}>{genre.name}</Flag>
+              ))
             }
           </div>
-          <Button className="flex gap-1 items-center justify-center bg-red-500 md:w-56" onClick={handleToggleFavorite}>
+          <div className="mb-10">
+            <p className="text-gray-400 mb-2">Data de lançamento: <span>{formatDate(data?.release_date || "")}</span></p>
+            <p className="flex gap-1 text-gray-400">Nota TMDB: <Flag>
+              {data?.vote_average}
+            </Flag></p>
+          </div>
+          {
+            data?.overview && (
+              <div className="mb-10">
+                <p className="text-gray-300 text-md">Sinopse</p>
+                <p className="text-gray-400">{data?.overview}</p>
+              </div>
+            )
+          }
+
+          <Button className="flex gap-1 items-center bg-red-500" onClick={handleToggleFavorite}>
             <Icon name="heart" fill={isFavorited ? "white" : undefined} />
             <p>{
               isFavorited ? "Remover dos Favoritos" : "Adicionar aos Favoritos"
