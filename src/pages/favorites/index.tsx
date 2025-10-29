@@ -8,7 +8,6 @@ import { useFavorites } from "@/providers";
 import type { Movie } from "@/types/movie-list";
 import { FavoritesNotFound } from "./components/favorites-not-found";
 import { Filter } from "./components/filter";
-import { ENV_CONFIG } from "@/config/app-config";
 
 export function FavoritesPage() {
   const { sortedFavorites, removeFavorite } = useFavorites()
