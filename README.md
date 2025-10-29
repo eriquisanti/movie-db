@@ -49,7 +49,7 @@ Crie um arquivo `.env` na raiz do projeto:
 # .env
 VITE_TMDB_API_TOKEN=seu_token_da_tmdb_aqui
 VITE_TMDB_API_URL=https://api.themoviedb.org/3
-VITE_TMDB_IMAGE_URL=https://image.tmdb.org/t/p/w300
+VITE_TMDB_IMAGE_URL=https://image.tmdb.org/t/p
 ```
 
 ou copie o conteúdo do arquivo `.env.example`

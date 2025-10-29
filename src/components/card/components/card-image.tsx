@@ -13,7 +13,7 @@ export function CardImage({ className, src, ...props }: CardImageProps) {
   }
   return (
     <img
-      src={ENV_CONFIG.TMDB_IMAGE_URL + src}
+      src={ENV_CONFIG.TMDB_IMAGE_URL + "/w300" + src}
       className={cn("w-full h-96 cover", className)}
       {...props}
     />

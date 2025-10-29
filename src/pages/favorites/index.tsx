@@ -39,7 +39,7 @@ export function FavoritesPage() {
             sortedFavorites.map((movie: Movie, index: number) => {
               return (
                 <Card cardId={movie.id} key={movie.id + "_" + index}>
-                  <CardImage src={ENV_CONFIG.TMDB_IMAGE_URL + "/" + movie.poster_path} />
+                  <CardImage src={movie.poster_path} />
                   <CardAction
                     icon={<Icon name="trash-2" />}
                     onClick={() => handleRemoveFavorite(movie.id)}
